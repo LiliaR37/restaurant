@@ -67,6 +67,32 @@ img {
   width: 100%;
 }
 
+@media (min-width: 768px) {
+  .header .barra {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header .barra a:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.header .barra .nombre-sitio p {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
 .header .barra .nombre-sitio {
   text-align: center;
   font-size: 2rem;
@@ -79,10 +105,10 @@ img {
   color: coral;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[3];
-      grid-template-columns: repeat(3, auto);
-  -webkit-column-gap: 1rem;
-          column-gap: 1rem;
+  -ms-grid-columns: (auto)[6];
+      grid-template-columns: repeat(6, auto);
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
 }
 
 .header .barra .menu a {
@@ -90,27 +116,23 @@ img {
   text-decoration: none;
   font-weight: 500;
   font-size: 1.2rem;
+  font-weight: 800;
 }
 
 @media (min-width: 768px) {
-  .header .barra {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 50% 50%;
-        grid-template-columns: 50% 50%;
-    -ms-grid-rows: unset;
-        grid-template-rows: unset;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .header .barra .menu a {
+    font-size: 1.5rem;
   }
 }
 
-.header .nombre-sitio p {
-  font-size: 2rem;
-  margin: 0;
-  padding: 0;
-  text-align: left;
+.header .barra .menu .icons {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header .barra .menu .icons {
+    display: inline;
+  }
 }
 
 .header-contenido .contenedor {
@@ -357,5 +379,25 @@ img {
 .regalos .contenedor-regalos .cuadro .display .btn a:hover {
   background-color: coral;
   color: #000000;
+}
+
+footer {
+  background-color: rgba(245, 222, 179, 0.612);
+}
+
+footer .contenedor .titulo-dos h1 {
+  color: #ffff;
+  text-transform: uppercase;
+}
+
+footer .contenedor-footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -71,6 +71,27 @@ img {
         position: absolute;
         width: 100%;
         
+            @include tablet {
+               display: flex;
+               align-items: center;
+               align-self: flex-start;
+               justify-content: space-between;
+    
+               
+               a:last-of-type {
+                margin-right: 0;
+
+                
+            }
+            }
+    
+        
+        .nombre-sitio p {
+            font-size: 2rem;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
 
 
         .nombre-sitio {
@@ -84,8 +105,8 @@ img {
             text-decoration: none;
             color: $secundario;
             display: grid;
-            grid-template-columns: repeat(3, auto);
-            column-gap: 1rem;
+            grid-template-columns: repeat(6, auto);
+            column-gap: 2rem;
             
 
             a {
@@ -93,8 +114,24 @@ img {
                 text-decoration: none;
                 font-weight: 500;
                 font-size: 1.2rem;
+                font-weight: 800;
+
+                @include tablet {
+                    font-size: 1.5rem;
+
+                }
+
+
+               
               
 
+            }
+            .icons {
+                display: none;
+
+                @include tablet {
+                    display: inline;
+                }
             }
 
         
@@ -110,25 +147,7 @@ img {
     
 }
 
-.header {
-    
-    .barra {
-        @include tablet {
-           display: grid;
-           grid-template-columns: 50% 50%;
-           grid-template-rows: unset;
-           justify-content: space-between;
-        }
 
-    }
-    .nombre-sitio p {
-        font-size: 2rem;
-        margin: 0;
-        padding: 0;
-        text-align: left;
-    }
-    
-}
 
 .header-contenido {
     .contenedor {
@@ -147,21 +166,16 @@ img {
                 padding-top: 9rem;
                 
                 
+            @include tablet {
+                
+                color: $negro;
+                font-family: $fuentSecundaria;
+               
+            
+        }
                 
             }
 
-            @include tablet {
-                h1 {
-                    color: $negro;
-                    font-family: $fuentSecundaria;
-                   
-                    
-                    
-                   
-                   
-                    
-                  }
-            }
 
           
          
@@ -477,7 +491,29 @@ transform: rotate(360deg);
 
     }
 
-   
+//    FOOTER
+
+footer {
+    background-color: rgba(245, 222, 179, 0.612);
+    
+
+   .contenedor {
+       .titulo-dos {
+           h1 {
+               color: $blanco;
+               text-transform: uppercase;
+
+       }
+    }
+   }
+
+    .contenedor-footer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        grid-template-rows: auto;
+        column-gap: 2rem;
+    }
+}
     
  
     
