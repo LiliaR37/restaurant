@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const imagenHero = document.querySelector('.hero');
 
     /** Arreglo de imagenes con fondo */
-    const imagenes = ['hero.jpg', 'hero2.jpg'];
+    const imagenes = ['hero.jpg'];
 
     /**Inicializadores */
     let i = 0;
